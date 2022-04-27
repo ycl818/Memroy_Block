@@ -1,0 +1,32 @@
+- 
+  const friends = [
+    {
+      'firstName': 'kevin',
+      'lastName': 'lee',
+      'mobile': '0123456789'
+    },
+     {
+      'firstName': 'Liz',
+      'lastName': 'Ting',
+      'mobile': '0126666666'
+    },
+     {
+      'firstName': 'Jay',
+      'lastName': 'Chou',
+      'mobile': '0155456789'
+    },
+  ]
+
+#friend-list 
+  each friend in friends
+    .friend 
+      .first-name= friend.firstName
+      .last-name= friend.lastName
+
+#list2 
+  each friend in friends
+    .friend 
+      .last-name #{friend.lastName}
+
+  else 
+    .oh-no You have no friends!
